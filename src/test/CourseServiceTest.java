@@ -8,9 +8,9 @@ class CourseServiceTest {
 
     CourseService course = new CourseService();
 
-    public void CourseServiceTest(){
-        assertEquals(course.getCourse("INTRO-WEB-6"),( "INTRO-WEB-6", "Introduction to Bootstrap Framework", 9, moduleWebFundamentals ));
-
-    }
+//    public void CourseServiceTest(){
+//        assertEquals(course.getCourse("INTRO-WEB-6"),( "INTRO-WEB-6", "Introduction to Bootstrap Framework", 9, moduleWebFundamentals );
+//
+//    }
 
 }
