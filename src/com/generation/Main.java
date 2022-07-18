@@ -59,6 +59,7 @@ public class Main
         System.out.println( student );
         System.out.println( "Insert course ID" );
         String courseId = scanner.next();
+        System.out.println(courseId);
         Course course = courseService.getCourse( courseId );
         if ( course == null )
         {
@@ -79,7 +80,15 @@ public class Main
 
     private static void showStudentsSummary( StudentService studentService, Scanner scanner )
     {
-        studentService.showSummary();
+        System.out.println( "Insert student ID" );
+        String studentId = scanner.next();
+        Student student = studentService.findStudent( studentId );
+        if ( student == null )
+        {
+            System.out.println( "Invalid Student ID" );
+            return;
+        }
+        studentService.showSummary(studentId);
     }
 
     private static void findStudent( StudentService studentService, Scanner scanner )

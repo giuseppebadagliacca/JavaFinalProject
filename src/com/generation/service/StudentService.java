@@ -24,9 +24,17 @@ public class StudentService
         return null;
     }
 
-    public void showSummary()
+    public void showSummary(String id)
     {
-        //TODO implement
+    if(students.containsKey(id)){
+        System.out.println("Student name: " + students.get(id).getName());
+        System.out.println("Student ID: " + students.get(id).getId());
+        System.out.println("Enrolled Classes: " + students.get(id).getClass());
+        System.out.println("Student Average: " + students.get(id).getAverage());
+        System.out.println("Student Email: " + students.get(id).getEmail());
+        System.out.println("Student DOB: " + students.get(id).getBirthDate());
+    }
+
     }
 
     public void enrollToCourse( String studentId, Course course )

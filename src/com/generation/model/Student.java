@@ -23,7 +23,7 @@ public class Student
 
     public void enrollToCourse( Course course )
     {
-        //TODO implement this method
+        this.courses.add(course);
     }
 
     public void registerApprovedCourse( Course course )
@@ -34,8 +34,7 @@ public class Student
 
     public boolean isAttendingCourse( String courseCode )
     {
-        //TODO implement this method
-        return false;
+        return this.courses.contains(courseCode);
     }
 
     @Override
